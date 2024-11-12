@@ -13,7 +13,7 @@ services:
   mysql-container:
     image: mysql
     volumes:
-      - D:\Users\lengr\AppData\Roaming\mysql:/var/lib/mysql
+      - /Users/guang/mysql-data:/var/lib/mysql
     environment:
       MYSQL_DATABASE: meeting_room_booking_system
       MYSQL_ROOT_PASSWORD: lengran
@@ -24,7 +24,7 @@ services:
   redis-container:
     image: redis
     volumes:
-      - D:\Users\lengr\AppData\Roaming\redis:/data
+      - /Users/guang/mysql-data:/var/lib/mysql
     networks:
       - common-network
     ports:
